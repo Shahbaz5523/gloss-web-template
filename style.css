@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgba(0, 255, 128, 0.904);
+}
+
+/* Header Styling */
+
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+header img{
+    display: none;
+}
+header img:hover{
+    opacity: 0.9;
+}
+
+/* Logo */
+
+header div{
+    width: 130px;
+    height: 50px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 0px 5px #32323275;
+}
+header div p{
+    top: 50%;
+    left: 50%;
+    font-size: 1.5rem;
+    position: absolute;
+    color: rgb(7, 206, 106);
+    text-transform: uppercase;
+    transform: translate(-50%,-50%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NavBar Styling */
+header nav{
+    display: block;
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+header nav ul li.active{
+    background-color: white;
+    color: rgb(7, 206, 106) !important;
+    box-shadow: 0px 5px 3px rgba(169, 169, 169, 0.836) , 0px 3px 1px rgb(255, 255, 255);
+}
+header nav ul li{
+    padding: 10px;
+    color: white;
+    margin-left: 5px;
+    margin-right:5px ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.856);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0px 3px 3px rgba(169, 169, 169, 0.836) , 0px 3px 1px rgba(0, 0, 0, 0.568);
+}
+header nav ul li:hover{
+    box-shadow: none;
+    cursor:pointer;
+}
+
+/* Responsive Navbar */
+
+@media screen and (max-width:834px){
+    header nav ul li.hide{
+        display: none;
+    }
+}
+@media screen and (min-width:573px){
+    header nav{
+        display: block !important;
+    }
+}
+@media screen and (max-width:572px){
+
+    header{
+        position: relative;
+        justify-content: flex-start;
+    }
+    header div{
+        margin-left: 50px;
+    }
+    header img{
+        width: 40px;
+        margin: 5px;
+        right: 10px;
+        position: absolute;
+        display: inline-block;
+    }
+    header nav{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.644);
+    }
+    header nav ul{
+        text-align: center;
+        flex-direction: column;
+    }
+    header nav ul li.active{
+        margin-top: 110px;
+        box-shadow: 0px 2px 5px rgba(169, 169, 169, 0.836) , 0px 3px 1px rgb(255, 255, 255);
+    }
+    header nav ul li{
+        width: 100px;
+        margin: 20px;
+        margin-left: 37%;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 3px 3px rgba(66, 64, 64, 0.63) , 0px 3px 1px rgba(0, 0, 0, 0.308);
+    }
+}
+
+
+/* Styling body of the web */
+
+.contentContainer{
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* top container styling Slider and aside */
+
+.contentContainer .topContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.contentContainer .topContainer .slider{
+    display: flex;
+    position: relative;
+    margin-left: 140px;
+    
+}
+.slider .left , .slider .right{
+    top: 45%;
+    cursor:pointer;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    font-size: xx-large;
+    font-weight: bolder;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+.slider .left:hover , .slider .right:hover{
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.slider .left{
+    right: 40px;
+}
+.slider .right{
+    left: 40px;
+}
+.contentContainer .topContainer .slider img{
+    width: 700px;
+    margin: 10px;
+}
+.contentContainer .topContainer .slider div{
+    bottom: 30px;
+    height: 10px;
+    width: 200px;
+    position: absolute; 
+    text-align: center;
+    left: calc(50% - 110px);
+    background-color: brown;
+}
+.slider div span{
+    float: left;
+    height: 10px;
+    width: calc(100% / 4);
+    display: inline-block;
+    background-color: #cccccc;
+}
+.slider div .active{
+    background-color: white !important;
+}
+.contentContainer .topContainer .support{
+    width: 25%;
+    margin: 10px;
+    /* height: 392px; */
+    display: flex;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+    background-color: #333333;
+}
+.contentContainer .topContainer .support h2{
+    width: 100%;
+    padding: 5px;
+    color: white;
+    text-align: left;
+    font-weight: 100;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contentContainer .topContainer .support img{
+    width: 320px;
+    margin: auto;
+}
+.contentContainer .topContainer .support p{
+    margin: 15px;
+    margin-top: 0px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contentContainer .topContainer .support div{
+    margin: 5px;
+    display: flex;
+    margin-top: 0px;
+}
+.contentContainer .topContainer .support div span{
+    width: 50px;
+    height: 15px;
+    padding: 5px;
+    font-size: small;
+    margin-left: 15px;
+    margin-right: 5px;
+    display: inline-block;
+    background-color: black;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contentContainer .topContainer .support div p{
+    margin: 0;
+}
+
+/* bottom container styling */
+
+.bottomContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;   
+    justify-content: center;
+    margin-top: 30px;
+}
+.bottomContainer .box{
+    width: 245px;
+    margin: 10px;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 100px;
+    border: 3px solid #32323262;
+    box-shadow: 0px 0px 10px #32323262 inset;
+    background-color: rgba(0, 128, 0, 0.185);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bottomContainer .box img:first-child{
+    margin: 30px;
+}
+.bottomContainer .box p{
+    margin-top: 5px;
+    text-align: center;
+}
+.box img:last-child{
+    float: right;
+    width: 15px;
+    margin: 10px;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #333333;
+}
